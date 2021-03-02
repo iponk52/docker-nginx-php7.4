@@ -17,7 +17,8 @@ services:
         depends_on:
             - php
     php:
-        image: nanoninja/php-fpm:${PHP_VERSION}
+        image:  php:fpm-alpine3.12 
+            # nanoninja/php-fpm:${PHP_VERSION} #php-fpm full
         restart: always
         volumes:
             - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
